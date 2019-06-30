@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    // 1+2的程序简单输出
-    printf("%d", 1 + 2);
+    // 除法，保留一位小数
+    printf("%.1f", 7 / 5.0);
     return 0;
 }
