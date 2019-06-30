@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    // 1+2的程序简单输出
+    printf("%d", 1 + 2);
     return 0;
 }
