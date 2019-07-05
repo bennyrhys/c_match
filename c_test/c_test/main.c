@@ -9,29 +9,15 @@
 #include <stdio.h>//控制输入输出io流
 
 int main() {
-    //1.4分支结构的程序设计
-    //1-12三整数排序-三变量交换法
+    //习题
+    //1-1平均数（average）
     //输入 三个整数
-    //输出 排序
-    //注意！1if{}else{}避免分支 2<=兼顾111情况
-    int a, b, c, temp;
+    //输出 平均值
+    //注意！保留三位小数
+    int a, b, c;
+    float average;
     scanf("%d%d%d", &a, &b, &c);
-    if(a > b){
-        temp = a;
-        a = b;
-        b = temp;
-    }
-    if (a > c) {
-        temp = a;
-        a = c;
-        c = temp;
-    }
-    if (b > c) {
-        temp = b;
-        b = c;
-        c = temp;
-    }
-    printf("%d %d %d", a, b, c);
-   
+    average = (a + b + c)/ 3.0;
+    printf("%.3f", average);
     return 0;
 }
