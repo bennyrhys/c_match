@@ -10,10 +10,9 @@
 
 int main() {
     //1.3顺序结构设计
-    //1-9交换变量-变种异或
+    //1-10交换变量-适合比赛的黑盒测试
     int a, b;
     scanf("%d%d", &a, &b);
-    a^=b^=a^=b;
-    printf("%d %d\n",a ,b);
+    printf("%d %d\n",b, a);
     return 0;
 }
