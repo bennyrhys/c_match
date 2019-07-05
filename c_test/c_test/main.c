@@ -7,18 +7,23 @@
 //
 
 #include <stdio.h>//控制输入输出io流
+#include <math.h>//引入数学函数
 
 int main() {
     //习题
-    //1-3连续和（sum）
-    //输入 数字n
-    //输出 sum
-    //注意！1……n的和，重在结果，不注重过程
-    int n, sum = 0;
+    //1-4正弦和余弦（sin，cos）
+    //输入 数字
+    //输出 n的sin和cos
+    //注意！n<360 使用函数
+    int n;
+    double numsin, numcos;
     scanf("%d", &n);
-    for(int i = 1; i <= n; i++){
-        sum += i;
+    if(n < 360){
+        numsin = sin(n);
+        numcos = cos(n);
+        printf("sin:%f cos:%f\n", numsin, numcos);
+    }else{
+        printf("条件不符");
     }
-    printf("%d", sum);
     return 0;
 }
