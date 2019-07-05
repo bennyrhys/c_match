@@ -10,12 +10,12 @@
 
 int main() {
     //1.3顺序结构设计
-    // 1-8交换变量
-    int a, b, c;
+    // 1-8交换变量不用第三个变量
+    int a, b;
     scanf("%d%d", &a, &b);
-    c = a;
-    a = b;
-    b = c;
+    a = a + b;
+    b = a - b;
+    a = a - b;
     printf("%d %d\n",a ,b);
     return 0;
 }
