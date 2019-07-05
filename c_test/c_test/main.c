@@ -9,18 +9,25 @@
 #include <stdio.h>//控制输入输出io流
 
 int main() {
-    //1.3d分支结构的程序设计
-    //1-11鸡兔同笼
-    //输入 总只数：n总腿数：m
-    //输出 如果没有结果返回无解，鸡数 兔数
-    int m, n, a, b;//a,b分别为鸡兔个数
-    scanf("%d%d", &n, &m);
-    a = (4 * n- m )/ 2;
-    b = n - a;
-    if(m % 2 == 1 || a < 0 || b < 0){
-        printf("无解");
-    }else{
-        printf("%d %d",a ,b);
+    //1.4分支结构的程序设计
+    //1-12三整数排序
+    //输入 三个整数
+    //输出 排序
+    //注意！1if{}else{}避免分支 2<=兼顾111情况
+    int a, b, c;
+    scanf("%d%d%d", &a, &b, &c);
+    if(a<=b && b <= c){
+        printf("%d %d %d\n", a, b, c);
+    }else if (a<=b && c <= b){
+        printf("%d %d %d\n", a, c, b);
+    }else if (b<=a && a<=c){
+        printf("%d %d %d\n", b, a, c);
+    }else if (b<=a && c<=a){
+        printf("%d %d %d\n", b, c, a);
+    }else if (c<=a && a<=b){
+        printf("%d %d %d\n", c, a, b);
+    }else if (c<=a && b<=a){
+        printf("%d %d %d\n", c, b, a);
     }
     return 0;
 }
