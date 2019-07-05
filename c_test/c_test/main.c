@@ -10,14 +10,13 @@
 
 int main() {
     //习题
-    //1-1平均数（average）
-    //输入 三个整数
-    //输出 平均值
-    //注意！保留三位小数
-    int a, b, c;
-    float average;
-    scanf("%d%d%d", &a, &b, &c);
-    average = (a + b + c)/ 3.0;
-    printf("%.3f", average);
+    //1-2温度（temperature）
+    //输入 华氏温度f
+    //输出 摄氏温度c
+    //注意！保留三位小数 c = 5 *( f - 32 )/ 9
+    float f, c;
+    scanf("%f", &f);
+    c = 5 *( f - 32 )/ 9;
+    printf("%.3f", c);
     return 0;
 }
