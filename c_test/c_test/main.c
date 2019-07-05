@@ -10,10 +10,12 @@
 
 int main() {
     //1.3顺序结构设计
-    // 1-6三位数反转
-    int n;
-    scanf("%d", &n);
-    int number = n%10*100 + n/10%10*10 + n/100;
-    printf("%d\n", number);
+    // 1-8交换变量
+    int a, b, c;
+    scanf("%d%d", &a, &b);
+    c = a;
+    a = b;
+    b = c;
+    printf("%d %d\n",a ,b);
     return 0;
 }
