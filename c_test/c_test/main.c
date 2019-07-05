@@ -10,24 +10,28 @@
 
 int main() {
     //1.4分支结构的程序设计
-    //1-12三整数排序
+    //1-12三整数排序-三变量交换法
     //输入 三个整数
     //输出 排序
     //注意！1if{}else{}避免分支 2<=兼顾111情况
-    int a, b, c;
+    int a, b, c, temp;
     scanf("%d%d%d", &a, &b, &c);
-    if(a<=b && b <= c){
-        printf("%d %d %d\n", a, b, c);
-    }else if (a<=b && c <= b){
-        printf("%d %d %d\n", a, c, b);
-    }else if (b<=a && a<=c){
-        printf("%d %d %d\n", b, a, c);
-    }else if (b<=a && c<=a){
-        printf("%d %d %d\n", b, c, a);
-    }else if (c<=a && a<=b){
-        printf("%d %d %d\n", c, a, b);
-    }else if (c<=a && b<=a){
-        printf("%d %d %d\n", c, b, a);
+    if(a > b){
+        temp = a;
+        a = b;
+        b = temp;
     }
+    if (a > c) {
+        temp = a;
+        a = c;
+        c = temp;
+    }
+    if (b > c) {
+        temp = b;
+        b = c;
+        c = temp;
+    }
+    printf("%d %d %d", a, b, c);
+   
     return 0;
 }
