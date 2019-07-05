@@ -13,6 +13,7 @@ int main() {
     // 1-6三位数反转
     int n;
     scanf("%d", &n);
-    printf("%d%d%d\n", n%10, n/10%10, n/100);
+    int number = n%10*100 + n/10%10*10 + n/100;
+    printf("%d\n", number);
     return 0;
 }
