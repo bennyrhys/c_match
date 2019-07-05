@@ -10,13 +10,15 @@
 
 int main() {
     //习题
-    //1-2温度（temperature）
-    //输入 华氏温度f
-    //输出 摄氏温度c
-    //注意！保留三位小数 c = 5 *( f - 32 )/ 9
-    float f, c;
-    scanf("%f", &f);
-    c = 5 *( f - 32 )/ 9;
-    printf("%.3f", c);
+    //1-3连续和（sum）
+    //输入 数字n
+    //输出 sum
+    //注意！1……n的和，重在结果，不注重过程
+    int n, sum = 0;
+    scanf("%d", &n);
+    for(int i = 1; i <= n; i++){
+        sum += i;
+    }
+    printf("%d", sum);
     return 0;
 }
