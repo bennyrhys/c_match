@@ -7,22 +7,21 @@
 //
 
 #include <stdio.h>//控制输入输出io流
-#include <math.h>//引入数学函数
 
 int main() {
     //习题
-    //1-5打折（discount）
-    //输入 买衣服件数
-    //输出 需要支付的金额（）元
-    //注意！一件衣服95，消费300元，打八五折，保留2位小数。
-    int n;
-    double sum;
-    scanf("%d", &n);
-    if(n * 95 > 300){
-        sum = n * 95 * 85 / 100.0;
+    //1-6三角形（triangle）
+    //输入 三条边
+    //输出 是否构成直角三角形yes/no，无法构成三角形no triangle
+    //注意！
+    float a, b, c;
+    scanf("%f%f%f", &a, &b, &c);
+    if(a+b>c && a+c>b && b+c>a){
+        if(a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a){
+            printf("直角三角形");
+        }
     }else{
-        sum = n * 95.0;
+        printf("无法构成三角形");
     }
-    printf("%.3f", sum);
     return 0;
 }
