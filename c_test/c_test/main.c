@@ -11,19 +11,18 @@
 
 int main() {
     //习题
-    //1-4正弦和余弦（sin，cos）
-    //输入 数字
-    //输出 n的sin和cos
-    //注意！n<360 使用函数
+    //1-5打折（discount）
+    //输入 买衣服件数
+    //输出 需要支付的金额（）元
+    //注意！一件衣服95，消费300元，打八五折，保留2位小数。
     int n;
-    double numsin, numcos;
+    double sum;
     scanf("%d", &n);
-    if(n < 360){
-        numsin = sin(n);
-        numcos = cos(n);
-        printf("sin:%f cos:%f\n", numsin, numcos);
+    if(n * 95 > 300){
+        sum = n * 95 * 85 / 100.0;
     }else{
-        printf("条件不符");
+        sum = n * 95.0;
     }
+    printf("%.3f", sum);
     return 0;
 }
