@@ -10,18 +10,17 @@
 
 int main() {
     //2章循环结构程序设计
-    //2-3aabb-枚举平方根
-    //输入
-    //输出 所有完全平方数形式的aabb
-    //注意！完全平方数 列举所有组合数字。aabb = 1100 + 11
-    for (int i = 1;; i++) {
-        int n = i * i;
-        if(n < 1000) continue;
-        if(n > 9999) break;
-        int hi = n / 100;
-        int lo = n % 100;
-        if (hi % 10 == hi / 10 && lo % 10 == lo /10)
-            printf("%d", n);
+    //2-4while 3n+1
+    //输入 大于1任意自然数
+    //输出 变换次数
+    //注意！奇数3n+1 偶数/2
+    int n, count = 0;
+    scanf("%d", &n);
+    while (n > 1) {
+        if(n % 2 == 1) n = 3 * n + 1;
+        else n /= 2;
+        count++;
     }
+    printf("%d", count);
     return 0;
 }
