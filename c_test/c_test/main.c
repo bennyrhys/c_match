@@ -9,17 +9,15 @@
 #include <stdio.h>//控制输入输出io流
 
 int main() {
-    //习题
-    //1-7闰年（year）
-    //输入 年份
-    //输出 判断是否为闰年
-    //注意！year%4==0 && year%100!=0 || year%400==0
-    int year;
-    scanf("%d", &year);
-    if((year%4==0) && (year%100!=0) || (year%400==0)){
-        printf("闰年");
-    }else{
-        printf("不是闰年");
+    //2章循环结构程序设计
+    //2-1for循环1——n
+    //输入 循环次数
+    //输出 1——n
+    //注意！依此每行一条
+    int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        printf("%d\n", i);
     }
     return 0;
 }
