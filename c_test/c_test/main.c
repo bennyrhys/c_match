@@ -10,18 +10,16 @@
 
 int main() {
     //习题
-    //1-6三角形（triangle）
-    //输入 三条边
-    //输出 是否构成直角三角形yes/no，无法构成三角形no triangle
-    //注意！
-    float a, b, c;
-    scanf("%f%f%f", &a, &b, &c);
-    if(a+b>c && a+c>b && b+c>a){
-        if(a*a + b*b == c*c || a*a + c*c == b*b || b*b + c*c == a*a){
-            printf("直角三角形");
-        }
+    //1-7闰年（year）
+    //输入 年份
+    //输出 判断是否为闰年
+    //注意！year%4==0 && year%100!=0 || year%400==0
+    int year;
+    scanf("%d", &year);
+    if((year%4==0) && (year%100!=0) || (year%400==0)){
+        printf("闰年");
     }else{
-        printf("无法构成三角形");
+        printf("不是闰年");
     }
     return 0;
 }
